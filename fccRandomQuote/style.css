@@ -1,0 +1,54 @@
+body{
+  background: forestgreen;
+  color: antiquewhite;
+  width: 700px;
+  margin: 0 auto;
+}
+h1 {
+  font-style: italic;
+  font-family:'Pacifico', 'Times New Roman', serif;
+  letter-spacing: 1.1px;
+}
+
+.intro {
+  margin: 40px;
+  line-height: 1.2em;
+  font-size: 23px;
+  font-family: 'Shadows Into Light','Times New Roman', serif;
+}
+
+button.refresh {
+  background: darkgreen;
+  box-shadow: -3px 5px 6px #1c1c1c;
+  padding: 10px 5px;
+  font-family: 'Pacifico';
+  border: 3px solid antiquewhite;
+  border-style: outset;
+  font-size: 20px;
+}
+
+button:hover {
+  background: antiquewhite;
+  color: darkgreen;
+   border: 3px solid #1c1c1c;
+}
+blockquote.quote-text { 
+  background: antiquewhite;
+  color: darkgreen;
+  margin: 150px 0;
+  border: 1px solid orange;
+  border-radius: 15px;
+  box-shadow: -3px 4px 5px #000;
+  padding: 35px;
+}
+blockquote cite {
+  color: darkgreen;
+  font-size: 18px;
+  font-family:'Shadows Into Light';
+  letter-spacing: 1.1px;
+  padding-left: 30px;
+}
+span.tweet {
+  display:block;
+  float:right;
+}

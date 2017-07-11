@@ -1,0 +1,182 @@
+@mixin darkOnHover($baseColor)
+  background-color: $baseColor
+  &:hover
+    background-color: darken($baseColor, 15%)
+
+@mixin keyPress
+  &:active
+    top: 2px
+    box-shadow: 0 0 #000
+    border: none
+  &:focus
+    outline: 0
+
+@import url(https://fonts.googleapis.com/css?family=Pragati+Narrow)
+
+$dark: #8A2C66
+$deep: #1EB090
+$main: #FAEBD7
+$pdow: saturate(darken($dark, 14), 9)
+$riptide: #6BE3C9
+$bright: #ff9fa8
+
+html, body
+  background: radial-gradient(circle, $riptide 20%, $deep)
+  height: 100%
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  font: bold 16px Arial
+  
+
+h1
+  font-family: 'Pragati Narrow', cursive
+  margin: 5px auto
+  color: $main
+  letter-spacing: .025em
+    
+.calculator
+  background: linear-gradient(DarkMagenta, $dark)
+  width: 370px
+  height: 450px
+  border-radius: 10px
+  margin: auto
+  text-align: center
+  padding: 5px
+  box-shadow: 0px 4px $pdow
+  
+.btn-group
+  margin: 15px auto 
+  text-align: center
+  width: 92%
+  
+.key
+  float: left
+  position: relative
+  margin: 4px
+  color: $dark
+  border: none
+  height: 54px
+  width: 77px
+  border-radius: 3px
+  box-shadow: 0px 3px $pdow
+  user-select: none
+  transition: all 0.2s ease
+  
+  &.operator
+    +darkOnHover(darken(saturate($main, 6), 18))
+    
+  &.return
+    +darkOnHover($bright)
+    box-shadow: 0px 3px darken($bright, 10%)
+    color: #fff
+    
+  +darkOnHover($main)
+  +keyPress
+    
+.screen 
+  text-align: right
+  width: 335px
+  height: 40px
+  border: #888
+  background-color: saturate(lighten($dark, 19), 8)
+  margin: 5px auto
+  border-radius: 3px
+  box-shadow: inset 0px 4px rgba(0, 0, 0, 0.55)
+  font: bold 18px Arial
+  color: $main
+  padding-right: 6px
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2)
+  &:focus
+    outline: 0
+    
+Raw
+ style.sass
+@mixin darkOnHover($baseColor)
+	background-color: $baseColor
+	&:hover
+		background-color: darken($baseColor, 15%)
+
+@mixin keyPress
+	&:active
+		top: 2px
+		box-shadow: 0 0 #000
+		border: none
+	&:focus
+		outline: 0
+	
+@import url(https://fonts.googleapis.com/css?family=Pragati+Narrow)
+
+$dark: #8A2C66
+$deep: #1EB090
+$main: #FAEBD7
+$pdow: saturate(darken($dark, 14), 9)
+$riptide: #6BE3C9
+$bright: #ff9fa8
+
+html, body
+	background: radial-gradient(circle, $riptide 20%, $deep)
+	height: 100%
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	font: bold 16px Arial
+
+h1
+	font-family: 'Pragati Narrow', cursive
+	margin: 5px auto
+	color: $main
+	letter-spacing: .025em
+    
+.calculator
+	background: linear-gradient(DarkMagenta, $dark)
+	width: 370px
+	height: 450px
+	border-radius: 10px
+	margin: auto
+	text-align: center
+	padding: 5px
+	box-shadow: 0px 4px $pdow
+
+.btn-group
+	margin: 15px auto 
+	text-align: center
+	width: 92%
+.key
+	float: left
+	position: relative
+	margin: 4px
+	color: $dark
+	border: none
+	height: 54px
+	width: 77px
+	border-radius: 3px
+	box-shadow: 0px 3px $pdow
+	user-select: none
+	transition: all 0.2s ease
+	&.operator
+		@include darkOnHover(darken(saturate($main, 6), 18))
+	&.return
+		@include darkOnHover($bright)
+		box-shadow: 0px 3px darken($bright, 10%)
+		color: #fff
+		@include darkOnHover($main)
+		@include keyPress
+
+.screen
+	text-align: right
+	width: 335px
+	height: 40px
+	border: #888
+	background-color: saturate(lighten($dark, 19), 8)
+	margin: 5px auto
+	border-radius: 3px
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.55)
+	font: bold 18px Arial
+	color: $main
+	padding-right: 6px
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.2)
+	&:focus
+		outline: 0

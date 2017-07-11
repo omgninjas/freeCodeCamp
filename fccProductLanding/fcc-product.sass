@@ -1,0 +1,252 @@
+@import "bourbon"
+@import 'neat'
+@import url('https://fonts.googleapis.com/css?family=Oswald|Raleway|Shrikhand|Lobster+Two|Pacifico')
+
+%stand-out
+	text-transform: uppercase
+	font-weight: bold
+	letter-spacing: 0.06em
+
+/*****    VARIABLES   *****/
+$chateau: #37934A
+$secondary: #7B9EA8
+$highlight: #78586F
+$btn: #6FD08C
+$block-bg: #fff
+$striping: #E6C79C
+$main-font: 'Raleway'
+$brand-font: "Shrikhand"
+$lead-text: "Pacifico"
+$lead-font: "Oswald"
+$fae: #FAEBD7
+$eholly: #043D11
+$heath: #8A2C66
+$columns: 4
+
+*
+	margin: 0
+	padding: 0
+
+body
+	color: $eholly
+	font-family: $main-font
+	font-size: em(18)
+	line-height: 1.2em
+
+.jump
+	padding-top: em(150)
+	padding-bottom: em(150)
+
+ul , ul li
+	list-style: none
+
+a[name]
+	display: block
+	position: relative
+	top: em(-250)
+	visibility: hidden
+
+.navbar-brand
+	font-family: $brand-font
+	font-size: 3.5em
+	padding: em(15) 0
+	span
+		color: $heath
+	img
+		text-indent: -9999px
+
+#real-nav
+	font-family: $lead-font
+	text-transform: uppercase
+	a.nav-link
+		color: $eholly
+
+#tagline
+	margin-bottom: em(50)
+	font-family: $lead-text
+
+.lead
+	font-family: $lead-text	
+	font-size: 4em
+	@extend %stand-out
+	text-transform: none
+	margin: em(20) auto em(15)
+	
+main
+	padding-top: em(200)
+	margin-bottom: em(55)
+	#lead
+		font-family: $lead-font
+		@extend .lead
+		text-transform: uppercase
+		font-size: 6.5em
+		text-shadow: 3px 4px 5px $chateau
+		margin: em(5) auto
+	
+input[type="email"]
+	height: 2.6em
+	width: 30em
+	border-radius: em(5)
+	&::placeholder
+		color: $chateau
+		padding-left: em(10)
+	
+#info
+	max-width: 75%
+	margin: 0 auto
+	p
+		font-size: 1.5em
+		line-height: 1.35em
+
+#how
+	@extend #info
+	
+#video
+	margin: em(90) auto em(55)
+	width: em(1000)
+	max-width: 95%
+	height: em(600)
+	max-height: 85%
+		
+.btn
+	background-color: $chateau
+	color: #fff
+	height: em(40)
+	box-shadow: 1px 2px 3px $eholly
+
+/******PRICING SECTION************/
+strong
+	color: $heath
+	font-size: 1.25em
+	text-transform: uppercase
+
+#pricing
+	width: 85%
+	margin: em(10) auto 10em
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	> .container
+		width: em(998)
+		max-width: 90%
+		margin: 0 auto
+
+.tbl-block
+	margin: 0 1%
+	box-sizing: border-box
+	background: $block-bg
+	margin-bottom: em(10)
+	+transition(all 0.45s ease-in-out)
+	h3
+		background: $chateau
+		color: $block-bg
+		text-align: center
+		font-size: em(25)
+		padding: em(15)
+		@extend %stand-out
+		font-family: $lead-font
+	
+.price
+	text-align: center
+	padding: em(20)
+	background: darken($highlight, 10%)
+	color: #fff
+	span
+		font-size: em(25)
+		font-weight: bold
+	
+.features
+	li
+		line-height: 2em
+		text-align: center
+		padding: em(10) 0
+		font-size: 1.1em
+		&:nth-child(odd)
+			background: $striping
+		
+	em
+		font-weight: bold
+		color: darken($highlight, 10%)
+
+a.btn
+	padding: em(10)
+	border: #ccc solid em(1)
+	display: block
+	text-align: center
+	+margin(5px)
+	+border-top-radius(5px)
+	+border-bottom-radius(5px)
+
+a.btn-primary
+	background: desaturate($btn, 20%)
+	color: $block-bg
+	&:hover
+		background: $btn 
+		
+/* Featured Package */
+.highlight
+	height: em(520)
+	margin-top: em(-30)
+	border: $block-bg solid em(4)
+	a.btn
+		margin-top: em(1)
+	li
+		padding: em(12)
+	
+footer
+	padding: 1em
+	background-color: $fae
+	color: slategrey
+	p
+		margin-bottom: 0
+	
+/*****    MEDIA QUERIES  *****/
+@media screen and (min-width: 875px)
+	#nav-bar
+		display: inline-block
+	#real-nav
+		font-weight: bold
+		letter-spacing: .1em
+		font-size: 1.35em
+		justify-content: flex-end
+		max-width: 75%
+		float: right
+	
+@media screen and (min-width: 320px) and (max-width: 875px)
+	#real-nav
+		justify-content: space-around
+	.navbar-brand
+		font-size: 2.5em
+		text-align: center
+	main 
+		#lead
+			font-size: 3em
+		#tagline
+			font-size: 1em
+	#pricing
+		flex-direction: column
+		&.container
+			max-width: 65%
+	.tbl-block
+		float: none
+		width: 100%
+		&:hover
+			border: 0
+
+	.highlight 
+		height: auto
+		margin-top: 0
+		border: 0
+
+	footer
+		display: block
+		position: relative
+		bottom: 0
+		width: 100%
+		.content
+			padding: em(20)
+		ul li
+			display: inline-block
+@media screen and (max-width: 360px)
+	#video
+		display: none

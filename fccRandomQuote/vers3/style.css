@@ -1,0 +1,115 @@
+@import 'https://fonts.googleapis.com/css?family=Meddon|Pacifico|Princess+Sofia';
+body {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background: none;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5em;
+}
+
+.full {
+  background: url('https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=21cf7e2e461fa5c32c6bc99ecd38c754')  no-repeat fixed left bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+nav.navbar{
+	padding:2px; 
+	border-top: 1px solid #CCC;
+	height: 10px;
+}
+a.navbar-brand{
+  transition: all .2s ease-in-out;
+}
+a.navbar-brand:hover{
+  color: rgba( 255,255,255, 1.0);
+  transform: scale(1.1);
+}
+.navbar a {
+  color: rgba(250,235,215, 0.75);
+  font-size: 1.2em;
+}
+.nav>li>a#tweet{
+  padding-top: 5px;
+  transition: all .4s ease;
+}
+a#tweet i{
+  font-size: 30px;
+  padding-top: 0;
+}
+.nav>li>a#tweet:hover, .nav>li>a#tweet:active{
+  padding-top: 8px;
+  color: #55acee;
+  transform: scale(1.4);
+
+}
+.nav:hover, .nav:focus, .nav:visited, .nav:active, .nav>li>a#tweet:hover, .nav>li>a#tweet:active, .nav>li>a#tweet:focus{
+  background-color: transparent;
+}
+blockquote {
+  font-family: 'Pacifico', cursive;
+	margin: 6em 5em 1em 0; 
+	font-size:2em;
+  border-left: 0;
+  color: rgba(255,255,255, 1.0);
+  background: rgba(0,0,0,.40);
+  text-align: center; 
+  padding-top: 30px;
+  border-radius: 25px;
+  letter-spacing: .07em;
+}
+
+blockquote:before {
+  color: #ccc;
+  font-family: 'Calligraffitti';
+  content: open-quote;
+  font-size: 4em;
+   line-height: 0.01em;
+  vertical-align: -0.4em;
+  padding-right: 0.1em;
+
+}
+
+blockquote:after{
+  color: #ccc;
+  font-family: 'Calligraffitti';
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 1%;
+  vertical-align: -0.49em;
+  padding: 0;
+}
+
+#cite {
+	width:85%; 
+	padding-right:5%; 
+	margin: 1em auto 0 auto; 
+  font-size:1.4em; 
+	text-align:right; 
+	font-style:italic; 
+  color: rgba(255,255,255, 1.0);
+  text-shadow: #000 6px 1px 20px;
+  letter-spacing: 0.04em;
+
+}
+
+.btn.refresh{
+  color: rgba( 255,255,255, 0.45);
+  transition: all .2s ease-in-out;
+  letter-spacing: 0.04em;
+  
+}
+.btn.refresh:hover{
+  background: transparent;
+  color: rgba( 255,255,255, 1.0);
+  transform: scale(1.1);
+}
+
+.btn.refresh:active,
+.btn.refresh:visited,
+.btn.refresh:focus {
+  background: transparent;
+}
