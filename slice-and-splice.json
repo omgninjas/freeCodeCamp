@@ -1,0 +1,1 @@
+{"index.js":"function frankenSplice(arr1, arr2, n) {\n  // It's alive. It's alive!\n   //copy the first array\n  let newArr = arr2.slice(0, arr2.length);\n  console.log(newArr);\n  //insert the first array at the index of the second array\n  newArr.splice(n, 0, ...arr1);\n  console.log(newArr);\n  return newArr;\n}\nfrankenSplice([1, 2, 3], [4, 5, 6], 1);"}

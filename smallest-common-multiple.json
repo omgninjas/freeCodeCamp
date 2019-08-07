@@ -1,0 +1,1 @@
+{"index.js":"\nfunction smallestCommons(arr) {\n\tarr.sort((a,b)=>a>b?1:-1)\n  let [div, num] = arr\n\n  while(div < arr[1]){\n      if(num % div===0) {\n\t\t\t\tdiv++;\n\t\t\t\t} else {\n       num += arr[1];\n\t\t\t div = arr[0]\n    }\n    }\n  return num;\n}\n\nconsole.log(smallestCommons([1,13]));"}

@@ -1,0 +1,1 @@
+{"index.js":"function findElement(arr, func) {\n  let num = 0;\n\n  return arr.find((num) => { return func(num)});\n\n}\n\nfindElement([1, 2, 3, 4], num => num % 2 === 0);"}
