@@ -26,7 +26,7 @@ function checkCashRegister(price, cash, cid) {
 
     function getChange(changeDue, cid) {
         const change = [],
-				roll = cid.length - 1;
+            roll = cid.length - 1;
         for (let i = roll; i >= 0; i--) {
             const denom = cid[i][0];
             const monies = cid[i][1];
@@ -37,12 +37,12 @@ function checkCashRegister(price, cash, cid) {
             while (changeDue >= value && numCoins > 0) {
                 changeDue -= value; //subtract .25 from CID
                 changeDue = changeDue.toFixed(2);
-								numCoins--; //substract a quarter from the number of coins stored 
+                numCoins--; //substract a quarter from the number of coins stored 
                 newChange++;
             }
             if (newChange > 0) {
                 change.push([denom, newChange * value]);
-								console.log(change);
+                console.log(change);
             }
         }
         register.change = change;
@@ -50,25 +50,23 @@ function checkCashRegister(price, cash, cid) {
         return register.change;
     }
 
-		getChange(changeDue, cid);
-		let totalCashback = register.change.slice(0).map(function (value, index) {
-            return value[1];
-        }).reduce((a, b) => {
-            return a + b;
-        });
-if (Number(changeDue) > Number(totalCID) || Number(totalCashback) < Number(changeDue)){
- register.status = "INSUFFICIENT_FUNDS";
- register.change = [];
-}else if (Number(totalCID) == Number(changeDue)) {
+    getChange(changeDue, cid);
+    let totalCashback = register.change.slice(0).map(function (value, index) {
+        return value[1];
+    }).reduce((a, b) => {
+        return a + b;
+    });
+    if (Number(changeDue) > Number(totalCID) || Number(totalCashback) < Number(changeDue)) {
+        register.status = "INSUFFICIENT_FUNDS";
+        register.change = [];
+    } else if (Number(totalCID) == Number(changeDue)) {
         register.status = "CLOSED";
         register.change = [...cid];
     } else if (changeDue < totalCID) {
         register.status = "OPEN";
-					getChange(changeDue, cid);
+        getChange(changeDue, cid);
     }
 
 
     return register;
 }
-checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]);
-// should return {status: "INSUFFICIENT_FUNDS", change: []}.
