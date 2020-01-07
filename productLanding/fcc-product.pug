@@ -1,0 +1,70 @@
+mixin hello(name, price, size, bandw, email, ftp, sql)
+	.container
+		ul.price-tbl
+			li.tbl-block
+				h3 #{name}
+				div.price
+					span #{price}
+					| &nbsp; Per Month
+				ul.features
+					li 
+						em #{size}&nbsp;
+						| GB Disk Space
+					li 
+						em #{bandw}&nbsp;
+						| GB Bandwith
+					li
+						em #{email}&nbsp;
+						| Email Accounts
+					li
+						em #{ftp}&nbsp;
+						| FTP Accounts
+					li
+						em #{sql}&nbsp;
+						| MySQL Databases
+					li 24/7 Email Support
+				div.tbl-footer
+					a.btn.btn-primary(href='#') Buy Now
+
+header#header
+	nav.navbar.fixed-top.navbar-light.bg-faded#nav-bar
+		a.navbar-brand(href='#')
+			img#header-img(src="#", alt="brand-logo")
+			span &nbsp; Furry Feels
+		ul.nav#real-nav
+			li.nav-item
+				a.nav-link.active(href='#features') Features
+			li.nav-item
+				a.nav-link(href='#about') How it Works
+			li.nav-item
+				a.nav-link(href='#pricing') Pricing
+main.text-center
+	h1#lead.animated.bounce Get Snuggled Now!
+	h2#tagline Trained Therapy Pets
+	form#form(action="https://www.freecodecamp.com/email-submit")
+		input#email(type="email", name="email", placeholder="Enter your email address" required)
+		input#submit(type="submit" value="Get Started").btn
+	section#features
+		ul
+			li#materials
+			li#shipping
+			li#quality
+	section#about
+			iframe#video(src="https://www.youtube.com/embed/hhoQqN9oUpo" frameborder="0" allowfullscreen)
+	section
+		h1.lead Offerings
+		#pricing
+			+hello('Simple Snuggle', 8.99, 2, 10, 5, 5, 5)  
+			+hello('Standard Snuggle', 14.99, 5, 20, 10, 10, 10)  
+			+hello('Super Snuggle', 19.99, 20, 50, 'Unlimited', 'Unlimited', 'Unlimited')  
+			+hello('Death Grip', 30.99, 'Unlimited','Unlimited','Unlimited','Unlimited','Unlimited')  
+footer
+	ul.nav.justify-content-center
+		li.nav-item
+			a.nav-link.active(href='#') Privacy
+		li.nav-item
+			a.nav-link(href='#') Terms
+		li.nav-item
+			a.nav-link(href='#') Contact
+	p.text-center Copyright &copy;&nbsp;2017 Twin Paw Therapy
+

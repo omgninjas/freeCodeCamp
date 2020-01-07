@@ -1,0 +1,89 @@
+
+body {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background: none;
+}
+
+.full {
+  background: url('https://images.unsplash.com/photo-1439902315629-cd882022cea0?q=80&fm=jpg&s=be415d11b61182f92a9db90dbdfb18c8')  no-repeat fixed left bottom;
+  background-size: cover;
+}
+
+nav.navbar{
+	padding:2px; 
+  font-size:1em; 
+	border-top: 1px solid #CCC;
+	height: 10px;
+}
+.navbar-brand {
+  font-family: 'Calligraffitti', cursive;
+  font-size: 1.5em;
+  color: #ccc;
+}
+.navbar a {
+  color: rgba(255,255,255, 0.3);
+}
+blockquote {
+  font-family: 'Calligraffitti', cursive;
+	margin: 6em 5em 1em 0; 
+	font-size:2em;
+  border-left: 0;
+  text-align: right;
+  color: rgba(255,255,255, 0.45);
+    
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+   line-height: 0.01em;
+  vertical-align: -0.4em;
+  padding-right: 0.1em;
+
+}
+
+blockquote:after{
+  color: #ccc;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 1%;
+  vertical-align: -0.49em;
+}
+
+#cite {
+	width:85%; 
+	padding-right:5%; 
+	margin: 1em auto 0 auto; 
+  font-size:1.4em; 
+	text-align:right; 
+	font-style:italic; 
+  color: rgba(255,255,255, 0.45)
+}
+
+.btn.refresh{
+  color: rgba( 255,255,255, 0.45);
+   transition: all .2s ease-in-out;
+  
+}
+.btn.refresh:hover{
+  background: transparent;
+  color: rgba( 255,255,255, 0.6);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.btn.refresh:active,
+.btn.refresh:visited,
+.btn.refresh:focus {
+  background: transparent;
+}
+/*#tweet i {
+  font-size: 28px;
+  color: #D8D8D8;
+}*/
+
+
+
