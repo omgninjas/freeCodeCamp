@@ -1,0 +1,7 @@
+const state = [];
+
+// change code below this line
+ let mapStateToProps = function(state) {
+     return Object.assign({}, state, { messages: state });
+        
+ }
